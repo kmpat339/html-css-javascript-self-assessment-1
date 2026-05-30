@@ -1,5 +1,9 @@
 /* Each box in the gallery */
 
+body {
+  /* reserve space at the bottom so the fixed footer doesn't cover content */
+  padding-bottom: 70px;
+}
 .row {
   border-style:solid;
   border-color:green;
@@ -46,4 +50,43 @@
 }
 .padding-10 {
   padding: 10px;
+}
+
+/* Positioning demo */
+
+/* relative: does not move on its own, but acts as the anchor for absolute children */
+.card {
+  position: relative;
+  width: 200px;
+  height:300px;
+  background-color: beige;
+  border: 2px solid navy;
+}
+
+/* absolute: pinned to the top-right corner of .card */
+.sticker {
+  position: absolute;
+  margin:0;
+  top: 0px;
+  right: 5px;
+  padding: 3px;
+  background-color: gold;
+}
+
+/* sticky: sticks to the top of the screen once you scroll past it */
+.sticky-note {
+  position: sticky;
+  top: 5px;
+  background-color: pink;
+}
+
+/* fixed: keeps the footer pinned to the bottom of the screen */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
 }
